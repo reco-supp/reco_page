@@ -243,6 +243,7 @@
       <a href="#figure-b">Figure B</a>
       <a href="#figure-c">Figure C</a>
       <a href="#figure-d">Figure D</a>
+      <a href="#figure-e">Figure E</a>
       <a href="#table-i">Table I</a>
     </nav>
 
@@ -287,6 +288,23 @@
       <p class="caption">Illustration of the limitations of Wan-2.1-1.3B for 720p text-to-video generation, as well as the editing results of ReCo on 480p and 720p videos.</p>
       <div class="figure-wrap">
         <img src="static/example4.png" alt="Figure D">
+      </div>
+    </section>
+
+    <section id="figure-e" class="section">
+      <div class="section-title">
+        <h2>Figure E</h2>
+        <a class="anchor-link" href="#figure-e">#figure-e</a>
+      </div>
+      <p class="caption">Visualization of the cross-attention and self-attention maps of ReCo during inference.</p>
+      <p style="margin:0 0 4px; font-size:14px; color:var(--muted);">
+        <strong style="color:#111827;">(a) Cross-attention maps (top):</strong> show how the full video latent attends to the source prompt and target prompt.
+      </p>
+      <p style="margin:0 0 12px; font-size:14px; color:var(--muted);">
+        <strong style="color:#111827;">(b) Self-attention maps (bottom):</strong> visualize how points in the target edited region, source edited region, and target background region attend to the full video latent.
+      </p>
+      <div class="figure-wrap">
+        <img src="static/example5_attn_overlay.png" alt="Figure E – Attention map visualization">
       </div>
     </section>
 

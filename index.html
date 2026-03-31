@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rebuttal Supplementary Material</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #1d4ed8;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(920px, 92vw);
+      margin: 40px auto 64px;
+    }
+
+    header {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin-bottom: 22px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(30px, 4vw, 46px);
+      color: #0f172a;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 18px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+      scroll-margin-top: 24px;
+    }
+
+    .section h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .anchor-link {
+      font-size: 13px;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid #dbe5ff;
+      background: #f3f7ff;
+      border-radius: 999px;
+      padding: 2px 10px;
+    }
+
+    .anchor-link:hover {
+      background: #e8efff;
+    }
+
+    .jump-nav {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-bottom: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .jump-nav a {
+      text-decoration: none;
+      color: #1e3a8a;
+      background: #eef2ff;
+      border: 1px solid #d9e1ff;
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-size: 14px;
+    }
+
+    .jump-nav a:hover {
+      background: #e0e7ff;
+    }
+
+    .section p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .caption {
+      color: #111827;
+      font-weight: 700;
+    }
+
+    .figure-wrap {
+      border: 1px dashed #cbd5e1;
+      border-radius: 10px;
+      padding: 10px;
+      background: #fbfdff;
+    }
+
+    .figure-wrap img {
+      width: 100%;
+      display: block;
+      border-radius: 8px;
+      border: 1px solid #dde3ef;
+      background: #f8fafc;
+    }
+
+    .model-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .model-panel .model-name {
+      margin: 0 0 8px;
+      color: #111827;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 720px) {
+      .model-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      text-align: center;
+      padding: 10px 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    th {
+      background: #f8fafc;
+      font-weight: 600;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    footer {
+      margin-top: 16px;
+      color: #9ca3af;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: clamp(20px, 2.6vw, 34px);
+      font-weight: 700;
+      color: var(--accent);
+      background: #e8efff;
+      border: 1px solid #c7d6ff;
+      vertical-align: middle;
+    }
+
+    .back-to-top {
+      position: fixed;
+      right: 80px;
+      top: 50%;
+      transform: translateY(-50%);
+      text-decoration: none;
+      color: #ffffff;
+      background: #365cd9;
+      border: 1px solid #365cd9;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      box-shadow: 0 10px 26px rgba(30, 64, 175, 0.36);
+      z-index: 999;
+    }
+
+    .back-to-top:hover {
+      background: #1e3a8a;
+    }
+  </style>
+</head>
+<body>
+  <main id="top" class="container">
+    <header>
+      <h1><span class="tag">Rebuttal Supplementary Material</span></h1>
+    </header>
+
+    <nav class="jump-nav" aria-label="Quick Links">
+      <a href="#figure-a">Figure A</a>
+      <a href="#figure-b">Figure B</a>
+      <a href="#figure-c">Figure C</a>
+      <a href="#figure-d">Figure D</a>
+      <a href="#table-i">Table I</a>
+    </nav>
+
+    <section id="figure-a" class="section">
+      <div class="section-title">
+        <h2>Figure A</h2>
+        <a class="anchor-link" href="#figure-a">#figure-a</a>
+      </div>
+      <p class="caption">Examples of edit results across three tasks, including object deletion, replacement, and addition, highlighting the resulting shadow and reflection effects. For each example, the top row shows the original video and the bottom row shows the edited video.</p>
+      <div class="figure-wrap">
+        <img src="static/example1.png" alt="Figure A">
+      </div>
+    </section>
+
+    <section id="figure-b" class="section">
+      <div class="section-title">
+        <h2>Figure B</h2>
+        <a class="anchor-link" href="#figure-b">#figure-b</a>
+      </div>
+      <p class="caption">Examples of video editing results for four tasks in complex scenes, with a focus on highly dynamic, multi-object scenarios. For each example, the top row shows the original video and the bottom row shows the edited video.</p>
+      <div class="figure-wrap">
+        <img src="static/example2.png" alt="Figure B">
+      </div>
+    </section>
+
+    <section id="figure-c" class="section">
+      <div class="section-title">
+        <h2>Figure C</h2>
+        <a class="anchor-link" href="#figure-c">#figure-c</a>
+      </div>
+      <p class="caption">Examples of long-video editing results for replacement and stylization tasks. </p>
+      <div class="figure-wrap">
+        <img src="static/example3.png" alt="Figure C">
+      </div>
+    </section>
+
+    <section id="figure-d" class="section">
+      <div class="section-title">
+        <h2>Figure D</h2>
+        <a class="anchor-link" href="#figure-d">#figure-d</a>
+      </div>
+      <p class="caption">Illustration of the limitations of Wan-2.1-1.3B for 720p text-to-video generation, as well as the editing results of ReCo on 480p and 720p videos.</p>
+      <div class="figure-wrap">
+        <img src="static/example4.png" alt="Figure D">
+      </div>
+    </section>
+
+    <section id="table-i" class="section">
+      <div class="section-title">
+        <h2>Table I</h2>
+        <a class="anchor-link" href="#table-i">#table-i</a>
+      </div>
+      <p class="caption">Evaluation results on ReCo-Bench using four VLMs, including two closed-source models (Gemini-2.5-Flash-Thinking and GPT-4o) and two open-source models (Kimi-k2.5 and Qwen-3.5-Plus). The trend is clearly reflected by the total scores in the last column of each table.</p>
+      <div class="model-grid">
+        <div class="model-panel">
+          <p class="model-name">Gemini-2.5-Flash-Thinking</p>
+          <div class="figure-wrap">
+            <img src="static/table1_gemini.png" alt="Gemini-2.5-Flash-Thinking evaluation metrics">
+          </div>
+        </div>
+        <div class="model-panel">
+          <p class="model-name">GPT-4o</p>
+          <div class="figure-wrap">
+            <img src="static/table1_gpt4o.png" alt="GPT-4o evaluation metrics">
+          </div>
+        </div>
+        <div class="model-panel">
+          <p class="model-name">Kimi-k2.5</p>
+          <div class="figure-wrap">
+            <img src="static/table1_kimi.png" alt="Kimi-k2.5 evaluation metrics">
+          </div>
+        </div>
+        <div class="model-panel">
+          <p class="model-name">Qwen-3.5-Plus</p>
+          <div class="figure-wrap">
+            <img src="static/table1_qwen.png" alt="Qwen-3.5-Plus evaluation metrics">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <a class="back-to-top" href="#top" aria-label="Back to top">back to top ↑</a>
+</body>
+</html>

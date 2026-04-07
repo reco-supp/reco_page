@@ -124,7 +124,12 @@
       font-size: 14px;
     }
 
-    .caption {
+    .section p.caption {
+      color: #111827;
+      font-weight: 400;
+    }
+
+    .section p.caption strong {
       color: #111827;
       font-weight: 700;
     }
@@ -244,7 +249,12 @@
       <a href="#figure-c">Figure C</a>
       <a href="#figure-d">Figure D</a>
       <a href="#figure-e">Figure E</a>
+      <a href="#figure-f">Figure F</a>
+      <a href="#figure-g">Figure G</a>
+      <a href="#figure-h">Figure H</a>
+      <a href="#figure-j">Figure J</a>
       <a href="#table-i">Table I</a>
+      <a href="#table-ii">Table II</a>
     </nav>
 
     <section id="figure-a" class="section">
@@ -297,14 +307,57 @@
         <a class="anchor-link" href="#figure-e">#figure-e</a>
       </div>
       <p class="caption">Visualization of the cross-attention and self-attention maps of ReCo during inference.</p>
-      <p style="margin:0 0 4px; font-size:14px; color:var(--muted);">
-        <strong style="color:#111827;">(a) Cross-attention maps (top):</strong> show how the full video latent attends to the source prompt and target prompt.
+      <p class="caption" style="margin:0 0 4px;">
+        <strong>(a) Cross-attention maps (top):</strong> show how the full video latent attends to the source prompt and target prompt.
       </p>
-      <p style="margin:0 0 12px; font-size:14px; color:var(--muted);">
-        <strong style="color:#111827;">(b) Self-attention maps (bottom):</strong> visualize how points in the target edited region, source edited region, and target background region attend to the full video latent.
+      <p class="caption" style="margin:0 0 12px;">
+        <strong>(b) Self-attention maps (bottom):</strong> visualize how points in the target edited region, source edited region, and target background region attend to the full video latent.
       </p>
       <div class="figure-wrap">
         <img src="static/example5_attn_overlay.png" alt="Figure E – Attention map visualization">
+      </div>
+    </section>
+
+    <section id="figure-f" class="section">
+      <div class="section-title">
+        <h2>Figure F</h2>
+        <a class="anchor-link" href="#figure-f">#figure-f</a>
+      </div>
+      <p class="caption">Illustration of the training video pair (source video and edited target video) and the corresponding edited-region masks under different padding settings, including 5–10, 10–15, and 55–60 pixels. We particularly highlight the mask overlay in the 55–60 padding case. As the padding becomes too large, the mask covers not only the intended editing region but also important background content outside the edit area.</p>
+      <div class="figure-wrap">
+        <img src="static/example6.png" alt="Figure F">
+      </div>
+    </section>
+
+    <section id="figure-g" class="section">
+      <div class="section-title">
+        <h2>Figure G</h2>
+        <a class="anchor-link" href="#figure-g">#figure-g</a>
+      </div>
+      <p class="caption">Comparison between ReCo trained with large-mask regional constraints (55–60 pixel padding) and the standard ReCo setting (5–10 pixel padding).</p>
+      <div class="figure-wrap">
+        <img src="static/example7.png" alt="Figure G">
+      </div>
+    </section>
+
+    <section id="figure-h" class="section">
+      <div class="section-title">
+        <h2>Figure H</h2>
+        <a class="anchor-link" href="#figure-h">#figure-h</a>
+      </div>
+      <p class="caption">Illustration of the training video pair (source video and edited target video) and the corresponding edited-region masks under different variants, including padding ranges of 5–10, 10–15, and 55–60 pixels, as well as temporally flickering masks simulated by random erosion. We particularly visualize the 55–60 padding case, where the enlarged mask covers not only the intended edit region but also important background content outside it. We also show the temporal flicker case, simulated by random erosion to mimic SAM2 segmentation inaccuracies or tracking failures, where the jittering mask may become smaller than the original object region.</p>
+      <div class="figure-wrap">
+        <img src="static/example6_2.png" alt="Figure H">
+      </div>
+    </section>
+
+    <section id="figure-j" class="section">
+      <div class="section-title">
+        <h2>Figure J</h2>
+        <a class="anchor-link" href="#figure-j">#figure-j</a>
+      </div>
+      <div class="figure-wrap">
+        <img src="static/example8.png" alt="Figure J">
       </div>
     </section>
 
@@ -339,6 +392,17 @@
             <img src="static/table1_qwen.png" alt="Qwen-3.5-Plus evaluation metrics">
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="table-ii" class="section">
+      <div class="section-title">
+        <h2>Table II</h2>
+        <a class="anchor-link" href="#table-ii">#table-ii</a>
+      </div>
+      <p class="caption">Comparison of ReCo under different edited-region mask settings, including 5-10, 10-15, and 55-60 pixel padding, as well as temporal flicker simulated by random erosion.</p>
+      <div class="figure-wrap">
+        <img src="static/table2.png" alt="Table II">
       </div>
     </section>
 

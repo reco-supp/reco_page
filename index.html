@@ -422,5 +422,53 @@
   </main>
 
   <a class="back-to-top" href="#top" aria-label="Back to top">back to top ↑</a>
+
+  <script>
+  (function() {
+    var allImagesLoaded = false;
+
+    function imagesReady() {
+      if (allImagesLoaded) return Promise.resolve();
+      return Promise.all(
+        Array.from(document.images)
+          .filter(function(img) { return !img.complete; })
+          .map(function(img) {
+            return new Promise(function(resolve) {
+              img.addEventListener('load', resolve);
+              img.addEventListener('error', resolve);
+            });
+          })
+      );
+    }
+
+    window.addEventListener('load', function() {
+      allImagesLoaded = true;
+      if (location.hash) {
+        var el = document.querySelector(location.hash);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+
+    document.addEventListener('click', function(e) {
+      var a = e.target.closest('a[href^="#"]');
+      if (!a) return;
+      var hash = a.getAttribute('href');
+      var el = document.querySelector(hash);
+      if (!el) return;
+
+      e.preventDefault();
+      history.pushState(null, '', hash);
+
+      if (allImagesLoaded) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        imagesReady().then(function() {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+    });
+  })();
+  </script>
 </body>
 </html>

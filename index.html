@@ -266,7 +266,7 @@
       </div>
       <p class="caption">Examples of edit results across three tasks, including object deletion, replacement, and addition, highlighting the resulting shadow and reflection effects. For each example, the top row shows the original video and the bottom row shows the edited video.</p>
       <div class="figure-wrap">
-        <img src="static/example1.png" alt="Figure A">
+        <img src="static/example1.jpg" alt="Figure A">
       </div>
     </section>
 
@@ -277,7 +277,7 @@
       </div>
       <p class="caption">Examples of video editing results for four tasks in complex scenes, with a focus on highly dynamic, multi-object scenarios. For each example, the top row shows the original video and the bottom row shows the edited video.</p>
       <div class="figure-wrap">
-        <img src="static/example2.png" alt="Figure B">
+        <img src="static/example2.jpg" alt="Figure B">
       </div>
     </section>
 
@@ -288,7 +288,7 @@
       </div>
       <p class="caption">Examples of long-video editing results for replacement and stylization tasks. </p>
       <div class="figure-wrap">
-        <img src="static/example3.png" alt="Figure C">
+        <img src="static/example3.jpg" alt="Figure C">
       </div>
     </section>
 
@@ -299,7 +299,7 @@
       </div>
       <p class="caption">Illustration of the limitations of Wan-2.1-1.3B for 720p text-to-video generation, as well as the editing results of ReCo on 480p and 720p videos.</p>
       <div class="figure-wrap">
-        <img src="static/example4.png" alt="Figure D">
+        <img src="static/example4.jpg" alt="Figure D">
       </div>
     </section>
 
@@ -316,7 +316,7 @@
         <strong>(b) Self-attention maps (bottom):</strong> visualize how points in the target edited region, source edited region, and target background region attend to the full video latent.
       </p>
       <div class="figure-wrap">
-        <img src="static/example5_attn_overlay.png" alt="Figure E – Attention map visualization">
+        <img src="static/example5_attn_overlay.jpg" alt="Figure E – Attention map visualization">
       </div>
     </section>
 
@@ -327,7 +327,7 @@
       </div>
       <p class="caption">Illustration of the training video pair (source video and edited target video) and the corresponding edited-region masks under different padding settings, including 5–10, 10–15, and 55–60 pixels. We particularly highlight the mask overlay in the 55–60 padding case. As the padding becomes too large, the mask covers not only the intended editing region but also important background content outside the edit area.</p>
       <div class="figure-wrap">
-        <img src="static/example6.png" alt="Figure F">
+        <img src="static/example6.jpg" alt="Figure F">
       </div>
     </section>
 
@@ -338,7 +338,7 @@
       </div>
       <p class="caption">Comparison between ReCo trained with large-mask regional constraints (55–60 pixel padding) and the standard ReCo setting (5–10 pixel padding).</p>
       <div class="figure-wrap">
-        <img src="static/example7.png" alt="Figure G">
+        <img src="static/example7.jpg" alt="Figure G">
       </div>
     </section>
 
@@ -349,7 +349,7 @@
       </div>
       <p class="caption">Illustration of the training video pair (source video and edited target video) and the corresponding edited-region masks under different variants, including padding ranges of 5–10, 10–15, and 55–60 pixels, as well as temporally flickering masks simulated by random erosion. We particularly visualize the 55–60 padding case, where the enlarged mask covers not only the intended edit region but also important background content outside it. We also show the temporal flicker case, simulated by random erosion to mimic SAM2 segmentation inaccuracies or tracking failures, where the jittering mask may become smaller than the original object region.</p>
       <div class="figure-wrap">
-        <img src="static/example6_2.png" alt="Figure H">
+        <img src="static/example6_2.jpg" alt="Figure H">
       </div>
     </section>
 
@@ -359,7 +359,7 @@
         <a class="anchor-link" href="#figure-j">#figure-j</a>
       </div>
       <div class="figure-wrap">
-        <img src="static/example8.png" alt="Figure J">
+        <img src="static/example8.jpg" alt="Figure J">
       </div>
     </section>
 
@@ -370,7 +370,7 @@
       </div>
       <p class="caption"><strong>Limitations</strong> of our model. Although we make every effort to account for challenging effects such as shadows and reflections during data construction, the current approach still has clear limitations, especially for the replace task. In particular, when the shadow is far from the object or extends over a long distance, the model struggles to generate natural shadow effects.</p>
       <div class="figure-wrap">
-        <img src="static/example9.png" alt="Figure K">
+        <img src="static/example9.jpg" alt="Figure K">
       </div>
     </section>
 
@@ -384,25 +384,25 @@
         <div class="model-panel">
           <p class="model-name">Gemini-2.5-Flash-Thinking</p>
           <div class="figure-wrap">
-            <img src="static/table1_gemini.png" alt="Gemini-2.5-Flash-Thinking evaluation metrics">
+            <img src="static/table1_gemini.jpg" alt="Gemini-2.5-Flash-Thinking evaluation metrics">
           </div>
         </div>
         <div class="model-panel">
           <p class="model-name">GPT-4o</p>
           <div class="figure-wrap">
-            <img src="static/table1_gpt4o.png" alt="GPT-4o evaluation metrics">
+            <img src="static/table1_gpt4o.jpg" alt="GPT-4o evaluation metrics">
           </div>
         </div>
         <div class="model-panel">
           <p class="model-name">Kimi-k2.5</p>
           <div class="figure-wrap">
-            <img src="static/table1_kimi.png" alt="Kimi-k2.5 evaluation metrics">
+            <img src="static/table1_kimi.jpg" alt="Kimi-k2.5 evaluation metrics">
           </div>
         </div>
         <div class="model-panel">
           <p class="model-name">Qwen-3.5-Plus</p>
           <div class="figure-wrap">
-            <img src="static/table1_qwen.png" alt="Qwen-3.5-Plus evaluation metrics">
+            <img src="static/table1_qwen.jpg" alt="Qwen-3.5-Plus evaluation metrics">
           </div>
         </div>
       </div>
@@ -415,7 +415,7 @@
       </div>
       <p class="caption">Comparison of ReCo under different edited-region mask settings, including 5-10, 10-15, and 55-60 pixel padding, as well as temporal flicker simulated by random erosion.</p>
       <div class="figure-wrap">
-        <img src="static/table2.png" alt="Table II">
+        <img src="static/table2.jpg" alt="Table II">
       </div>
     </section>
 
